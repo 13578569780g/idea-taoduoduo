@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/Style/register.css">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./Style/login.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="slider">
+        <img src="./imgs/618.jpg" alt="Slider Image">
+        <img src="./imgs/6.6.jpg" alt="Slider Image">
+        <img src="./imgs/年终.jpg" alt="Slider Image">
+    </div>
+    <div class="login-form">
+        <div class="form-header">
+            <a class="title" href="login.html">登录</a>
+            <a href="register.html" class="title">注册</a>
+        </div>
+        <form action="/user.let?type=register" method="post">
+            <input type="text" placeholder="账号" class="input-field" name="name">
+            <input type="password" placeholder="密码" class="input-field" name="pwd">
+            <input type="text" placeholder="请输入您的电话" class="input-field" name="phone">
+            <input type="text" placeholder="请输入您的收货地址" class="input-field" name="address">
+            <input type="submit" value="注册" class="submit-button">
+        </form>
+    </div>
+</div>
+
+<script>
+    // 获取轮播图容器和所有图片元素
+    const slider = document.querySelector('.slider');
+    const slides = slider.querySelectorAll('img');
+
+    let currentSlide = 0;
+
+    // 将第一张图片设置为初始时的活动图片
+    slides[currentSlide].classList.add('active');
+
+    // 切换到下一张图片
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    // 每3秒切换一次图片
+    setInterval(nextSlide, 3000);
+</script>
+
+
+</body>
+</html>

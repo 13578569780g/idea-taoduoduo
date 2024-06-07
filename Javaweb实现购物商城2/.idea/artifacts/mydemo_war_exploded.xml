@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mydemo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/mydemo_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="mydemo/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mydemo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mchange-commons-java-0.2.19" />
+          <element id="library" level="project" name="commons-fileupload-1.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
